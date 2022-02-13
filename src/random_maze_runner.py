@@ -1,5 +1,5 @@
 import random
-from MazeRunner import MazeRunner
+from maze_runner import MazeRunner
 
 # Concrete class implements the Maze Runner API with random decision making
 class RandomMR (MazeRunner):

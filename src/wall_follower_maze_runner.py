@@ -1,4 +1,4 @@
-from MazeRunner import MazeRunner
+from maze_runner import MazeRunner
 
 # Concrete class implements the MazeRunner API following the wall-follower
 # maze solving algorithm

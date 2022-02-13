@@ -1,0 +1,5 @@
+*.pyc
+.idea
+article.pages
+venv
+.DS_Store

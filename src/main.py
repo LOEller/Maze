@@ -1,8 +1,9 @@
 from graphics import *
-from WallFollowerMR import WallFollowerMR
-from RandomMR import RandomMR
-from EvolvableMR import EvolvableMR
-from Population import Population
+from population import Population
+from hard_population import HardPopulation
+
+# On the agenda should definitely be to change all of the xranges to range
+# which I can do with one vim command but I'll save for later
 
 # TO Do: label groups of MRs that get drawn to the screen with the number of MR
 # at that position, generations with really low average fitnesses tend to be really spread out
@@ -46,7 +47,7 @@ for j in range(len(maze)):
 
 # make a new population
 # Population(window, maze, starting X pos, starting Y pos, starting direction, end X pos, end Y pos)
-population = Population(win, maze, 0, 2, 0, 18, 19)
+population = HardPopulation(win, maze, 0, 2, 0, 18, 19)
 
 # run the simulation for 100 generations
 population.advance(100)

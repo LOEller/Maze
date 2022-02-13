@@ -1,4 +1,4 @@
-from EvolvableMR import EvolvableMR
+from evolvable_maze_runner import EvolvableMR
 import math
 import copy
 import random
@@ -28,9 +28,9 @@ class Population:
             self.newGeneration()
             # only draw new record-fitness populations
             if (self.averageFitness < drawn_population.averageFitness):
-                #drawn_population.undrawAll()
+                drawn_population.undrawAll()
                 drawn_population = copy.copy(self)
-                #drawn_population.drawAll()
+                drawn_population.drawAll()
 
     # Moves each maze runner in the population through the maze until a max
     # number of moves are made, or the maze runner reaches the end
@@ -64,9 +64,9 @@ class Population:
     # Input: 2 EvolvableMRs
     # Output: 1 EvolvableMR which is the result of crossing over the two inputs
     def crossover (self, parent1, parent2):
-        crossPoint = random.randint(1,15)
+        crossPoint = random.randint(1, 15)
         result = EvolvableMR(self.win, self.startX, self.startY, self.dir, self.maze)
-        for i in range(1,15):
+        for i in range(1, 15):
             if i <= crossPoint:
                 result.chromosome[i] = parent1.chromosome[i]
             elif i > crossPoint:
@@ -78,7 +78,7 @@ class Population:
     #         direction
     def mutate (self, MR):
         result = copy.copy(MR)
-        index = random.randint(1,15)
+        index = random.randint(1, 15)
         result.chromosome[index] = random.choice(
             ['right', 'straight', 'left', 'reverse'])
         return result

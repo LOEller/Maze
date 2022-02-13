@@ -1,4 +1,4 @@
-from MazeRunner import MazeRunner
+from maze_runner import MazeRunner
 import random
 
 # Concrete class implements the Maze Runner API to allow for use with the
