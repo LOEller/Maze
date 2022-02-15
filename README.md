@@ -2,6 +2,15 @@
 
 (An old project of mine, not under active development but recently updated to work with python 3)
 
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
+
 A framework for the genetic algorithm using maze solvers, written in Pure python. I use graphics.py, made by John Zelle for drawing
 the maze. http://mcsp.wartburg.edu/zelle/python/graphics.py
 
